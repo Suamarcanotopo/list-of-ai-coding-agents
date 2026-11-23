@@ -30,3 +30,14 @@
 ## Reversibilidade
 
 PR exclusivamente documental no fork. Fechar sem merge preserva a main do fork e todo o ecossistema operacional.
+
+## PR e verificação de integridade da proposta
+
+- PR Draft: https://github.com/Suamarcanotopo/list-of-ai-coding-agents/pull/1
+- Commit inicial dos oito arquivos: `07f160dc6f44b91d5ffdb36f728d1849f0237a0a`. O HEAD atual e eventuais revisões devem ser consultados na PR.
+- Comparação GitHub da primeira gravação com main: oito novos arquivos, zero alterações em arquivos preexistentes. Main do fork permanece `5ebe902b5f8ec3deaf59f87c9cee9dbd1211f5c9` nesta observação.
+- Auditoria estrutural executada via verificação de conteúdo remoto em JavaScript: **PASS** para 490/490 entradas, 485 URLs únicas, categorias e cinco IDs duplicados vinculados corretamente.
+- Verificações negativas executadas em memória: **3/3 detectadas** (ID adulterado, URL adulterada e tentativa de falso `SANDBOX_PASS`). São testes da estrutura, não testes reais de ferramentas CLI externas.
+- Validador Python versionado: **NOT_RUN** por indisponibilidade de download dos arquivos conectados no executor local. O próximo agente deve executar a própria implementação do script antes de declarar `PYTHON_PASS`.
+- GitHub Actions: nenhuma execução associada ao commit inicial foi encontrada. A pasta de workflows preexistente não foi alterada; **CI=NOT_RUN**.
+- Status após essa atualização: **DOCUMENTED / DRAFT / RESEARCH_ONLY / SOURCE_CODE_AUDITS=NOT_RUN / HOST_RUNTIME=NOT_RUN / NO_MERGE**.
